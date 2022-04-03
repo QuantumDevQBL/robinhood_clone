@@ -1,3 +1,6 @@
+import { userSchema } from './userSchema'
+import { transactionSchema } from './transactionSchema'
+
 // First, we must import the schema creator
 import createSchema from 'part:@sanity/base/schema-creator'
 
@@ -12,5 +15,7 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     /* Your types here! */
+    userSchema,
+    transactionSchema
   ]),
 })
