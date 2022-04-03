@@ -1,6 +1,8 @@
 import Header from '../components/Header';
-import PortfolioChart from '../components/PortfolioChart';
+import PortfolioChartOriginal from '../components/PortfolioChartOriginal';
 import BuyTokens from '../components/BuyTokens';
+import Notice from '../components/Notice';
+import Assets from '../components/Assets';
 
 import React from 'react';
 
@@ -49,7 +51,7 @@ export default function Home() {
           </div>
           <div>
             <div className={styles.chartContainer} >
-              <PortfolioChart/>
+              <PortfolioChartOriginal />
             </div>
           </div>
           <div className={styles.buyingPowerContainer} >
@@ -65,6 +67,7 @@ export default function Home() {
             </div>
             <BuyTokens />
           </div>
+          <Notice />
         </div>
         <div className={styles.rightMain} >
           <div className={styles.rightMainItem} >
@@ -77,7 +80,10 @@ export default function Home() {
 
 
           { /** Map through coins and make asset componet for every coin */}
-          {  /** <Asset /> */}
+          <Assets coin={"BTC"} price={0.89}/>
+          <Assets coin={"SOL"} price={-0.89}/>
+          <Assets coin={"ETH"} price={1.89}/>
+          <Assets coin={"USDC"} price={0.31}/>
 
           <div className={styles.rightMainItem}>
             <div className={styles.itemTitle} >
