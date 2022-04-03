@@ -23,10 +23,12 @@ const Header = () => {
   const formatedAccount = '0xB0c...FDe';
 
   return (
-    <div className={styles.container} style={{Height: "fit-content"}}>
-      <div className={styles.leftHeader}>
-        < Image src={logo} width={200} height={40} className={ styles.Logo }/>
-        <div className={styles.searchWrapper}>
+    <div className={styles.container} style={{ height: "fit-content",
+    zIndex: "1",
+ }}>
+      <div className={styles.leftHeader} style={{ minWidth: "200px" }}>
+        < Image src={logo} width={200} height={40} className={ styles.Logo } style={{ flexBasis: "50%" }}/>
+        <div className={styles.searchWrapper}  style={{ flexBasis: "50%", minWidth: "200px" }}>
           <div className={styles.searchInputContainer}>
             <AiOutlineSearch className={styles.searchicon} />
             <div className={styles.searchInputWrapper}>
@@ -35,7 +37,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={styles.rightHeader}>
+      <div className={styles.rightHeader} style={{ margin: "auto" }}>
         <div className={styles.menuItem} >Rewards</div>
         <div className={styles.menuItem} >Portfolio</div>
         <div className={styles.menuItem} >Cash</div>

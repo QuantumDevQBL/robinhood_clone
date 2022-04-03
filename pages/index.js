@@ -1,4 +1,6 @@
 import Header from '../components/Header';
+import PortfolioChart from '../components/PortfolioChart';
+import BuyTokens from '../components/BuyTokens';
 
 import React from 'react';
 
@@ -47,7 +49,7 @@ export default function Home() {
           </div>
           <div>
             <div className={styles.chartContainer} >
-              {/** <PortfolioChart/> */}
+              <PortfolioChart/>
             </div>
           </div>
           <div className={styles.buyingPowerContainer} >
@@ -61,7 +63,7 @@ export default function Home() {
               Transfer your funds here.
               </div>
             </div>
-            {/**<BuyTokens /> */}
+            <BuyTokens />
           </div>
         </div>
         <div className={styles.rightMain} >
